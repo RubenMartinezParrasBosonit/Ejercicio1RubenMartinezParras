@@ -23,41 +23,6 @@ public class Persona {
 
   public Persona(String[] persona) {
 
-    /*try {
-        if(persona[0] != null){
-            this.setNombre(persona[0]);
-        }else{
-            this.setNombre("Desconocido");
-        }
-    }catch(IndexOutOfBoundsException e){
-        this.setNombre("Desconocida");
-    }
-
-    try {
-        if(persona[1] != ""){
-            this.setPoblacion(persona[1]);
-        }else{
-            this.setPoblacion("Desconocida");
-        }
-    }catch(IndexOutOfBoundsException e){
-        this.setPoblacion("Desconocida");
-    }
-
-    try {
-        if (persona[2] != null) {
-            try{
-                this.setEdad(persona[2]);
-            }catch(IndexOutOfBoundsException e){
-                this.setEdad("-1");
-            }
-
-        } else {
-            this.setEdad("-1");
-        }
-    }catch(IndexOutOfBoundsException e){
-        this.setEdad("-1");
-    }*/
-
     Optional<String> optName;
     Optional<String> optPoblacion;
     Optional<String> optEdad;
