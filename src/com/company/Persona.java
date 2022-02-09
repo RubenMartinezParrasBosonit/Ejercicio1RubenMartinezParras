@@ -1,7 +1,5 @@
 package com.company;
 
-import java.io.InvalidClassException;
-import java.util.Arrays;
 import java.util.Optional;
 
 public class Persona {
@@ -23,6 +21,7 @@ public class Persona {
 
   public Persona(String[] persona) {
 
+    //Aquí usamos Optional para hacer más cómodo el manejo de nulos.
     Optional<String> optName;
     Optional<String> optPoblacion;
     Optional<String> optEdad;
