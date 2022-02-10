@@ -20,8 +20,8 @@ public class Main {
 
     BufferedReader obj = new BufferedReader(new FileReader(doc));
     List<Persona> personas = new ArrayList();
-    String strng = new String();
-    String[] splitText = new String[2];
+    String strng;
+    String[] splitText;
     while ((strng = obj.readLine()) != null) {
       splitText = strng.split(":");
       personas.add(new Persona(splitText));
@@ -29,7 +29,7 @@ public class Main {
     }
 
     // Con este fragmento de código, filtro las poblaciones que tienen "" y las cambio "Desconocida"
-    // usando stream(). Se ha intentado usar expresiones regulares como \\S, pero no he conseguido que funciones
+    // usando stream(). Se ha intentado usar expresiones regulares como \\S, pero no he conseguido que funcione
     personas.stream()
         .filter(persona -> persona.getPoblacion() == "")
         .forEach(
@@ -54,7 +54,7 @@ public class Main {
         .filter(persona -> persona.getEdadInt() < 25)
         .forEach(
             (p) -> {
-              System.out.println(p.toString());
+              System.out.println(p);
             });
 
     // Si queremos meter a las personas filtradas en una lista, se haría así.

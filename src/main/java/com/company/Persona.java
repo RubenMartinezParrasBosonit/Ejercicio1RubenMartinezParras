@@ -41,7 +41,7 @@ public class Persona {
     try {
       optEdad = Optional.of(persona[2]);
     } catch (IndexOutOfBoundsException e) {
-      optEdad = Optional.of("-1");
+      optEdad = Optional.of("999");
     }
 
     this.setNombre(optName.get());
@@ -70,7 +70,7 @@ public class Persona {
   }
 
   public int getEdadInt() {
-    return Integer.valueOf(edad);
+    return Integer.parseInt(edad);
   }
 
   public void setEdad(String edad) {
